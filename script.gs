@@ -180,6 +180,10 @@ function displayRules(sheet, range, data) {
   sheet.getRange('C1:C2').activate().mergeVertically();
   sheet.getRange('A1:C2').setHorizontalAlignment('center').setVerticalAlignment('middle');
 
+  //Frozing lines and columns 
+  sheet.setFrozenRows(2);
+  sheet.setFrozenColumns(2);
+
   //sizing the columns 
   sheet.autoResizeColumns(1, 3);
   sheet.setColumnWidths(4, data[0].length - 3, 90)
